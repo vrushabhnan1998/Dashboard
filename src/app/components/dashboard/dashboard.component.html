@@ -1,17 +1,13 @@
 <div class="container-fluid bg-body-secondary h-100">
     <h2>Exclutive Dashboard</h2>    
     <div class="row m-0 p-0 gap-3">
-        <form action="">
-            <div class="card rounded col-2 px-2">
+            <div class="card rounded col-sm-12 col-lg-3 col-md-4 col-xl-3 col-xxl-3 px-2">
                 <div>
-                    
                     <app-range-date-picker [labelName]="'Auto Date Range'" [dropdownValue]="" [options]="autoDateRange" (dropdownValueEmit)="range($event);" class="col-2 status-button "></app-range-date-picker>
                 </div>
             </div>  
-        </form>
-       
-        <div class="row m-0 p-0 gap-3">
-            <div class="card col p-3">
+        <div class="row m-0 p-0 card-grid">
+            <div class="card p-3 ">
                 <span class="font-primary">New Wins</span>
                     <div class="d-flex flex-column justify-content-center align-items-center h-100">
                         <h1 class="fw-bold">230</h1>
@@ -32,7 +28,7 @@
                         </svg>25%</h3>                        <span class="fw-semibold color-grey">vs previous 30 days</span>
                     </div>
             </div>
-            <div class="card col p-3">
+            <div class="card p-3 ">
                 <span class="font-primary">Trial:Win Rate</span>
                     <div class="d-flex flex-column justify-content-center align-items-center h-100">
                         <div class="d-flex">
@@ -57,7 +53,7 @@
                         <span class="fw-semibold color-grey">vs previous 30 days</span>
                     </div>
             </div>
-            <div class="card col p-3">
+            <div class="card p-3 ">
                 <span class="font-primary">New MRR</span>
                     <div class="d-flex flex-column justify-content-center align-items-center h-100">
                         <div class="d-flex">
@@ -80,7 +76,7 @@
                         </svg>25%</h3>                        <span class="fw-semibold color-grey">vs previous 30 days</span>
                     </div>
             </div>
-            <div class="card col p-3">
+            <div class="card p-3">
                 <apx-chart
                       [series]="pieChart.series"
                       [labels]="pieChart.labels"
@@ -97,38 +93,40 @@
 
             </div>
         </div>
-        <div class="row gap-3 m-0 p-0">
-            <div class="card col p-3">
-                <div id="chart">
-                    <apx-chart
-                      [series]="bubbleChart.series"
-                      [colors]="bubbleChart.colors"
-                      [chart]="bubbleChart.chart"
-                      [legend]="bubbleChart.legend"
-                      [xaxis]="bubbleChart.xaxis"
-                      [grid]="bubbleChart.grid"
-                      [dataLabels]="bubbleChart.dataLabels"
-                      [title]="bubbleChart.title"
-                      [yaxis]="bubbleChart.yaxis"
-                    ></apx-chart>
-                  </div>
-            </div>
-            <div class="card col p-3">
-                <div id="columnChart">
-                    <apx-chart
-                      [series]="columnChart.series"
-                      [colors]="columnChart.colors"
-                      [plotOptions]="columnChart.plotOptions"
-                      [legend]="columnChart.legend"
-                      [chart]="columnChart.chart"
-                      [xaxis]="columnChart.xaxis"
-                      [fill]="columnChart.fill"
-                      [dataLabels]="columnChart.dataLabels"
-                      [title]="columnChart.title"
-                      [yaxis]="columnChart.yaxis"
-                    ></apx-chart>
-                  </div>
-            </div>
+        <div class="row m-0 p-0 MRR-And-MRP">
+                <div class="card p-3">
+                    <div id="chart">
+                        <apx-chart
+                          [series]="bubbleChart.series"
+                          [colors]="bubbleChart.colors"
+                          [chart]="bubbleChart.chart"
+                          [legend]="bubbleChart.legend"
+                          [xaxis]="bubbleChart.xaxis"
+                          [grid]="bubbleChart.grid"
+                          [dataLabels]="bubbleChart.dataLabels"
+                          [title]="bubbleChart.title"
+                          [yaxis]="bubbleChart.yaxis"
+                        ></apx-chart>
+                      </div>
+                </div>
+         
+                <div class="card p-3">
+                    <div id="columnChart">
+                        <apx-chart
+                          [series]="columnChart.series"
+                          [colors]="columnChart.colors"
+                          [plotOptions]="columnChart.plotOptions"
+                          [legend]="columnChart.legend"
+                          [chart]="columnChart.chart"
+                          [xaxis]="columnChart.xaxis"
+                          [fill]="columnChart.fill"
+                          [dataLabels]="columnChart.dataLabels"
+                          [title]="columnChart.title"
+                          [yaxis]="columnChart.yaxis"
+                        ></apx-chart>
+                      </div>
+                </div>
+           
         </div>
     </div>
     

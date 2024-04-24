@@ -22,3 +22,24 @@ color: #5a5858;
     color: #5a5858;
 }
 
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-gap: 1rem;
+    .card{
+        height: 240px;
+    }
+}
+
+.MRR-And-MRP {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr)); /* Change 2fr to 1fr */
+    grid-gap: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For tablets and below */
+    .MRR-And-MRP {
+        grid-template-columns: auto; /* Change to auto for mobile and tablet devices */
+    }
+}

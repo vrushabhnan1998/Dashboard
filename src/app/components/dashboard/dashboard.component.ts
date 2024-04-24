@@ -350,6 +350,7 @@ initChart(){
     labels: ['Referral', 'Direct', 'Organic Search'],
     chart: {
       type: "donut",
+      height:"210"
     },
     title: {
       style: {
