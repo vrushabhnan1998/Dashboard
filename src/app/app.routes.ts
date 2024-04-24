@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 export const routes: Routes = [
     {
@@ -14,8 +15,11 @@ export const routes: Routes = [
     },
 ];
 
+
 @NgModule({
     exports: [RouterModule],
+    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }]
+
   })
   export class AppRoutingModule {
   }
